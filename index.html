@@ -1,1 +1,105 @@
-Hello World
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Technical portfolio of Ivan Sharavuev, Embedded C++ and System Software Engineer.">
+  <title>Ivan Sharavuev | Technical Portfolio</title>
+  <style>
+    :root{--bg:#09101e;--surface:#111b30;--text:#edf3ff;--muted:#b2c0da;--accent:#5ce0bd;--line:#2a3b5e;--code:#0d1628}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1080px;margin:auto;padding:54px 24px 80px}h1,h2,h3{line-height:1.2;margin:0 0 14px}h1{font-size:clamp(2.4rem,6vw,4.8rem);letter-spacing:-.045em}h2{font-size:1.55rem;margin-top:58px}h3{font-size:1.14rem}p{margin:0 0 14px}.eyebrow,.label{color:var(--accent);font-size:.78rem;font-weight:750;letter-spacing:.1em;text-transform:uppercase}.lead{max-width:830px;color:var(--muted);font-size:1.18rem}.nav,.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.nav a,.button{border:1px solid var(--line);border-radius:999px;padding:7px 13px;color:var(--text);text-decoration:none;font-size:.92rem}.button{border-color:var(--accent)}a{color:var(--accent)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:22px}.project{border-left:3px solid var(--accent);margin:18px 0;padding:4px 0 4px 22px}.meta{color:var(--muted);font-size:.92rem}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.tag{background:var(--code);border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:.79rem;padding:3px 9px}ul{margin:8px 0 0;padding-left:20px}li{margin:5px 0}footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;margin-top:60px;padding-top:24px}@media(max-width:560px){main{padding:38px 18px 60px}.project{padding-left:16px}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Technical Portfolio · Novi Sad, Serbia</p>
+      <h1>Ivan Sharavuev</h1>
+      <p class="lead">Embedded C++ / System Software Engineer with 9+ years of experience in Linux-based, Android, AOSP, Android Automotive, and mobile platforms. I work on difficult problems at the boundary of application software, framework, HAL, middleware, drivers, kernel, and hardware—particularly when the failure is ambiguous, documentation is incomplete, or the issue occurs only on target hardware.</p>
+      <div class="links"><a class="button" href="https://github.com/shriwand">GitHub</a><a class="button" href="https://www.linkedin.com/in/isharavuev">LinkedIn</a><a class="button" href="mailto:shriwand@gmail.com">Email</a></div>
+      <nav class="nav"><a href="#projects">Projects</a><a href="#capabilities">Capabilities</a><a href="#public-work">Public work</a><a href="#education">Education</a></nav>
+    </header>
+
+    <section id="projects">
+      <h2>Project History</h2>
+      <p class="lead">Commercial projects are described at a technical level only. Source code, confidential architecture, and customer-specific information are not included.</p>
+
+      <article class="project">
+        <p class="label">Luxoft · May 2025 – Present</p>
+        <h3>Android Automotive camera stitching and platform integration</h3>
+        <p>Developing a custom Android library for stitching camera streams into single-stream, multi-stream, and 2D top-view compositions. Developing and maintaining a camera application that integrates this camera-pipeline functionality into a modular automotive infotainment stack.</p>
+        <ul><li>Implemented AUTOSAR E2E Profile 11 in C to add standards-based end-to-end protection for communication between modular automotive components.</li><li>Contributed to low-latency rendering, system stability, and integration quality across Android Automotive functionality.</li></ul>
+        <div class="tags"><span class="tag">C</span><span class="tag">C++20</span><span class="tag">Android Automotive</span><span class="tag">JNI</span><span class="tag">OpenGL ES</span><span class="tag">Camera pipelines</span><span class="tag">AUTOSAR E2E</span></div>
+      </article>
+
+      <article class="project">
+        <p class="label">Luxoft · Oct 2024 – May 2025 · AMD / Xilinx platform</p>
+        <h3>Android IVI camera HAL and performance engineering</h3>
+        <p>Developed a custom C++ Camera2 HAL to integrate non-standard V4L2 cameras into an Android IVI platform running on AMD and Xilinx hardware.</p>
+        <ul><li>Implemented explicit buffer lifecycle management and synchronization to support low-latency video streaming.</li><li>Resolved concurrent-use contention between Android Camera2 and EVS by designing logical camera-device partitioning.</li><li>Profiled IVI launcher UI and rendering paths; moved selected graphics rendering work to the GPU to improve responsiveness and frame delivery.</li><li>Diagnosed and fixed stability issues across the Android Automotive camera and application stack.</li></ul>
+        <div class="tags"><span class="tag">C++20</span><span class="tag">Camera2 HAL</span><span class="tag">V4L2</span><span class="tag">EVS</span><span class="tag">Linux</span><span class="tag">OpenGL ES</span><span class="tag">Profiling</span></div>
+      </article>
+
+      <article class="project">
+        <p class="label">Promwad · Jan 2022 – Sep 2024</p>
+        <h3>Android POS terminals: kernel debugging, Yocto, and device integration</h3>
+        <p>Developed and integrated system software for Android-based POS terminals.</p>
+        <ul><li>Investigated a critical battery hot-swap failure across userspace and the Linux kernel. Reverse-engineered a proprietary MediaTek driver with Ghidra and implemented a stability patch for an issue that could prevent devices from lasting a full working shift.</li><li>Upgraded Yocto-based platform components and backported kernel patches to preserve platform functionality and hardware compatibility.</li><li>Created a unified wrapper around two proprietary barcode-scanner SDKs, enabling two scanner models through a consistent interface.</li></ul>
+        <div class="tags"><span class="tag">C</span><span class="tag">Embedded Linux</span><span class="tag">Linux kernel</span><span class="tag">Yocto</span><span class="tag">Ghidra</span><span class="tag">Driver analysis</span></div>
+      </article>
+
+      <article class="project">
+        <p class="label">Promwad · Jan 2022 – Sep 2024</p>
+        <h3>Racing-car data monitoring system</h3>
+        <p>Developed Linux-based monitoring software in C++ using STL, GStreamer, and Boost events.</p>
+        <ul><li>Designed and implemented a configurable storage-retention component that activates below a low-free-space threshold and removes recordings using either oldest-first or largest-first policy selected by the user.</li><li>Built GTest/GMock coverage above 80% for mission-critical components, including tests with mocked GStreamer pipelines and filesystem I/O, supporting ASPICE-related quality requirements.</li></ul>
+        <div class="tags"><span class="tag">C++</span><span class="tag">STL</span><span class="tag">GStreamer</span><span class="tag">Boost</span><span class="tag">Resource management</span><span class="tag">GTest/GMock</span></div>
+      </article>
+
+      <article class="project">
+        <p class="label">Promwad · Jan 2022 – Sep 2024</p>
+        <h3>Android emulator, custom ROMs, and MCU diagnostics</h3>
+        <ul><li>Developed system software for custom Android ROMs and a custom Android emulator.</li><li>Backported and adapted Android 11 networking functionality for a custom Android 10 emulator, enabling TCP/UDP port forwarding.</li><li>Contributed to a diagnostic utility for MCU communication over CAN using PCAN-TP.</li></ul>
+        <div class="tags"><span class="tag">AOSP</span><span class="tag">Android build system</span><span class="tag">TCP/UDP</span><span class="tag">CAN</span><span class="tag">PCAN-TP</span></div>
+      </article>
+
+      <article class="project">
+        <p class="label">Open Mobile Platform · Sep 2016 – Jan 2022</p>
+        <h3>Device-specific Sailfish OS / Aurora OS platform development</h3>
+        <p>Developed middleware and system-level components for mobile platforms using C++, Qt, QML, and GLib.</p>
+        <ul><li>Contributed to 10 device-specific OS builds deployed on more than 300,000 phones and tablets; resolved hardware-specific issues across bootloaders, Linux kernel drivers, HAL, middleware, and UI layers.</li><li>Managed ODM sources, build and integration issues, and CI pipelines for device builds.</li><li>Designed an RPM build process for hardware-specific packages that eliminated redundant source fetching and reduced build time and disk-space use.</li><li>Supported an R&D PC platform using a MIPS processor without a discrete GPU, adapting the software stack for constrained hardware.</li></ul>
+        <div class="tags"><span class="tag">C++</span><span class="tag">Qt/QML</span><span class="tag">GLib</span><span class="tag">Embedded Linux</span><span class="tag">Drivers</span><span class="tag">RPM</span><span class="tag">CI/CD</span><span class="tag">MIPS</span></div>
+      </article>
+    </section>
+
+    <section id="capabilities">
+      <h2>Technical Capability Map</h2>
+      <div class="grid">
+        <article class="card"><h3>Languages & runtime</h3><p>C, C++11/17/20, Python, Bash, Kotlin, Java, STL, POSIX, multithreading, synchronization, JNI.</p></article>
+        <article class="card"><h3>Embedded & Linux</h3><p>Embedded Linux, Linux kernel, device drivers, kernel debugging, bootloaders, Yocto, target debugging, device bring-up, filesystem and resource management.</p></article>
+        <article class="card"><h3>Android platform</h3><p>Android, AOSP, Android Build System, Android Frameworks, Android HAL, Android Automotive, Camera2 HAL, EVS, HMI and System UI.</p></article>
+        <article class="card"><h3>Camera & multimedia</h3><p>V4L2, Camera2, camera pipelines, stream stitching, buffer lifecycle management, low-latency streaming, GStreamer, OpenGL ES.</p></article>
+        <article class="card"><h3>Performance & reliability</h3><p>Profiling, GPU-assisted rendering, latency-oriented optimization, performance tuning, unit testing, GTest/GMock, ASPICE SWE.2/SWE.3, AUTOSAR E2E.</p></article>
+        <article class="card"><h3>Build & delivery</h3><p>CMake, Git, Gerrit, Jenkins, CI/CD, Repo tool, RPM, Docker, Bash automation, requirements analysis.</p></article>
+      </div>
+    </section>
+
+    <section id="public-work">
+      <h2>Selected Public Work</h2>
+      <div class="grid">
+        <article class="card"><h3><a href="https://github.com/shriwand/bufferDriver">bufferDriver</a></h3><p>Public C project exploring low-level buffer-driver development.</p></article>
+        <article class="card"><h3><a href="https://github.com/shriwand/archivator">archivator</a></h3><p>Public C project focused on file archiving.</p></article>
+        <article class="card"><h3><a href="https://github.com/shriwand/ip_filter">ip_filter</a></h3><p>Public C++ programming project.</p></article>
+        <article class="card"><h3><a href="https://github.com/shriwand/hp_omen_max_16_playbook">hp_omen_max_16_playbook</a></h3><p>Public Fedora configuration automation playbook.</p></article>
+      </div>
+      <p class="meta">These repositories represent personal or educational work. They are not commercial production code and are not intended to disclose employer or customer intellectual property.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education & Professional Development</h2>
+      <div class="card"><p><strong>BSc in Computer Science</strong> — Innopolis University, 2017</p><p>Embedded Linux Kernel and Driver Development (Bootlin, 2020) · Android OS Internals / AOSP Automotive ROM Development · Visual Embedded Android · GPU Parallel Programming with CUDA · ASPICE/DQMS</p><p><strong>Languages:</strong> Russian — Native · English — C1 professional working proficiency</p></div>
+    </section>
+
+    <footer>© Ivan Sharavuev · Open to embedded systems, Android platform, automotive, camera, and systems software engineering opportunities.</footer>
+  </main>
+</body>
+</html>
