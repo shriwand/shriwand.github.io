@@ -1,0 +1,309 @@
+/* ============================================================================
+   DESIGN TOKENS & ROOT VARIABLES
+   ============================================================================ */
+
+:root {
+  --bg: #0b1020;
+  --text: #edf3ff;
+  --muted: #9eacc5;
+  --line: #293754;
+  --accent: #63e6be;
+  --accent2: #7aa7ff;
+  --max: 1120px;
+}
+
+/* ============================================================================
+   GLOBAL STYLES
+   ============================================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0b1020, #101b32);
+  color: var(--text);
+  font: 16px/1.65 Inter, system-ui, sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ============================================================================
+   LAYOUT
+   ============================================================================ */
+
+.wrap {
+  width: min(calc(100% - 40px), var(--max));
+  margin: auto;
+}
+
+/* ============================================================================
+   NAVIGATION
+   ============================================================================ */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-weight: 800;
+}
+
+.navlinks {
+  display: flex;
+  gap: 22px;
+  font-size: 0.92rem;
+}
+
+/* ============================================================================
+   HERO SECTION
+   ============================================================================ */
+
+.hero {
+  padding: 92px 0 76px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 64px;
+  align-items: end;
+}
+
+.eyebrow,
+.meta,
+.date {
+  color: var(--accent2);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.7rem, 6vw, 5.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+  margin: 18px 0 26px;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.hero-card {
+  background: rgba(18, 26, 45, 0.85);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px;
+}
+
+.hero-card strong {
+  display: block;
+  font-size: 2.3rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+/* ============================================================================
+   CARDS & COMPONENTS
+   ============================================================================ */
+
+.card {
+  background: rgba(18, 26, 45, 0.85);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px;
+}
+
+.card p,
+.hero-card p,
+.section-intro,
+.role p {
+  color: var(--muted);
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 11px 17px;
+  border: 1px solid var(--accent);
+  border-radius: 9px;
+  color: var(--bg);
+  background: var(--accent);
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.button.alt {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.button.alt:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ============================================================================
+   SECTIONS
+   ============================================================================ */
+
+section {
+  padding: 76px 0;
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+
+h3 {
+  margin: 0 0 8px;
+}
+
+.section-intro {
+  font-size: 1rem;
+}
+
+/* ============================================================================
+   GRID LAYOUT
+   ============================================================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ============================================================================
+   TAGS
+   ============================================================================ */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: #c8d4e9;
+  font-size: 0.82rem;
+}
+
+/* ============================================================================
+   PROJECT CARDS
+   ============================================================================ */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.project li {
+  margin-bottom: 8px;
+}
+
+/* ============================================================================
+   TIMELINE & EXPERIENCE
+   ============================================================================ */
+
+.timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.role {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 28px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ============================================================================
+   CONTACT SECTION
+   ============================================================================ */
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
+.footer {
+  padding: 30px 0;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+@media (max-width: 800px) {
+  .navlinks {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 60px;
+  }
+
+  .grid,
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .role {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .contact {
+    display: block;
+  }
+}
